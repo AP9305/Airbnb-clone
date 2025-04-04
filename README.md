@@ -1,33 +1,38 @@
-# TravelPad
+# 🏠 TravelPad
 
 A modern accommodation booking platform built with React and TypeScript.
 
-![TravelPad Preview](./public/assets/preview.png)
+## 📸 Screenshots
 
-## Overview
+### Home Page
+<img src="public/assets/screenshots/home.jpg" alt="Home Page" width="800"/>
 
-TravelPad is a full-featured accommodation booking platform that allows users to discover, book, and list properties. Built with modern web technologies and focusing on user experience.
+### Property Details
+<img src="public/assets/screenshots/property.jpg" alt="Property Details" width="800"/>
 
-## Features
+### Booking Interface
+<img src="public/assets/screenshots/booking.jpg" alt="Booking Interface" width="800"/>
 
-- Property discovery with advanced filtering
-- Real-time booking system
-- User authentication
-- Wishlist functionality
-- Responsive design
-- Interactive maps
-- Host dashboard
+## ✨ Features
 
-## Tech Stack
+- 🔍 Property discovery with advanced filtering
+- 📅 Real-time booking system
+- 🔐 User authentication
+- ❤️ Wishlist functionality
+- 📱 Responsive design
+- 🗺️ Interactive maps
+- 📊 Host dashboard
 
-- React
-- TypeScript
-- Tailwind CSS
-- React Router
-- Framer Motion
-- Radix UI
+## 🛠️ Tech Stack
 
-## Getting Started
+- ⚛️ React
+- 📘 TypeScript
+- 🎨 Tailwind CSS
+- 🔄 React Router
+- ✨ Framer Motion
+- 🎯 Radix UI
+
+## 🚀 Getting Started
 
 ```bash
 # Clone the repository
@@ -40,18 +45,7 @@ npm install
 npm run dev
 ```
 
-## Project Structure
-
-## 📸 Screenshots
-
-### Home Page
-![Home Page](public/screenshots/home.png)
-
-### Property Details
-![Property Details](public/screenshots/property.png)
-
-### Booking Interface
-![Booking Interface](public/screenshots/booking.png)
+## 📁 Project Structure
 
 ## 🎯 Key Components
 
