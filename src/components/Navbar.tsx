@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, User } from "lucide-react";
+import { Search, User, Heart } from "lucide-react";
 import { Link } from 'react-router-dom';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
@@ -40,6 +40,14 @@ const Navbar = () => {
               Explore
             </Button>
           </Link>
+          
+          <Link to="/wishlist">
+            <Button variant="link" className="text-airbnb-dark flex items-center gap-1">
+              <Heart className="h-4 w-4" />
+              <span className="hidden sm:inline">Wishlist</span>
+            </Button>
+          </Link>
+          
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline" className="ml-2 border border-gray-300 rounded-full p-2 flex items-center gap-2">
