@@ -13,14 +13,6 @@ A modern accommodation booking platform built with React and TypeScript.
 ### Property Listings
 ![Property Listings](public/assets/screenshots/property-cards.jpg)
 
-### Category Navigation
-![Category Navigation](public/assets/screenshots/filter-bar.jpg)
-
-### Travel Inspiration
-![Travel Inspiration](public/assets/screenshots/inspiration-grid.jpg)
-
-### Explore Categories
-![Explore Categories](public/assets/screenshots/category-grid.jpg)
 
 ## ✨ Key Features
 
