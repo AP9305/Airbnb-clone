@@ -1,38 +1,37 @@
-# TravelPad 🏡
+# TravelPad
 
-A modern travel accommodation platform built with React, TypeScript, and Tailwind CSS. Experience seamless property booking with a beautiful, responsive interface.
+A modern accommodation booking platform built with React and TypeScript.
 
-## ✨ Features
+![TravelPad Preview](./public/assets/preview.png)
 
-- 🏠 Modern property listings with dynamic filtering
-- 📅 Smart calendar-based booking system
-- 🔍 Instant search functionality
-- 💫 Smooth animations and transitions
-- 📱 Fully responsive design
-- 🎨 Clean, modern UI/UX
-- 🛡️ Type-safe with TypeScript
-- ⚡ Lightning-fast with Vite
+## Overview
 
-## 🚀 Tech Stack
+TravelPad is a full-featured accommodation booking platform that allows users to discover, book, and list properties. Built with modern web technologies and focusing on user experience.
 
-- **Frontend:** React 18 with TypeScript
-- **Styling:** Tailwind CSS
-- **State Management:** React Context
-- **Routing:** React Router v6
-- **UI Components:** 
-  - Radix UI
-  - Framer Motion
-  - React Day Picker
-- **Build Tool:** Vite
+## Features
 
-## 🛠️ Installation
+- Property discovery with advanced filtering
+- Real-time booking system
+- User authentication
+- Wishlist functionality
+- Responsive design
+- Interactive maps
+- Host dashboard
+
+## Tech Stack
+
+- React
+- TypeScript
+- Tailwind CSS
+- React Router
+- Framer Motion
+- Radix UI
+
+## Getting Started
 
 ```bash
 # Clone the repository
-git clone https://github.com/ayush/travel-pad-genesis.git
-
-# Navigate to project
-cd travel-pad-genesis
+git clone https://github.com/ayush/travel-pad.git
 
 # Install dependencies
 npm install
@@ -41,7 +40,7 @@ npm install
 npm run dev
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ## 📸 Screenshots
 
