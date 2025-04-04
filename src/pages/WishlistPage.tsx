@@ -5,6 +5,7 @@ import PropertyCard from "@/components/PropertyCard";
 import { useWishlist } from '@/contexts/WishlistContext';
 import { properties } from "@/data/properties";
 import { Heart } from 'lucide-react';
+import WishlistButton from '@/components/WishlistButton';
 
 const WishlistPage = () => {
   const { wishlist } = useWishlist();

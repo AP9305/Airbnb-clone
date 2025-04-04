@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import WishlistButton from './WishlistButton';
 
 export interface PropertyProps {
   id: number;
@@ -16,7 +16,6 @@ export interface PropertyProps {
 
 const PropertyCard = ({ id, title, location, price, rating, images, superhost }: PropertyProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isFavorite, setIsFavorite] = useState(false);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -24,12 +23,6 @@ const PropertyCard = ({ id, title, location, price, rating, images, superhost }:
 
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const toggleFavorite = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsFavorite(!isFavorite);
   };
 
   return (
@@ -66,14 +59,7 @@ const PropertyCard = ({ id, title, location, price, rating, images, superhost }:
               </>
             )}
             
-            <button 
-              onClick={toggleFavorite}
-              className="absolute top-2 right-2 p-1.5 rounded-full"
-            >
-              <Heart 
-                className={`h-6 w-6 ${isFavorite ? 'fill-airbnb-red text-airbnb-red' : 'text-white stroke-white fill-black/20'}`} 
-              />
-            </button>
+            <WishlistButton propertyId={id} />
             
             {superhost && (
               <div className="absolute top-2 left-2 bg-white px-2 py-1 rounded-full text-xs font-medium text-airbnb-dark">
