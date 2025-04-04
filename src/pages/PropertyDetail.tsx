@@ -1,4 +1,3 @@
-
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from "@/components/Navbar";
@@ -11,6 +10,70 @@ import { Separator } from "@/components/ui/separator";
 import { Heart, Star, Share } from "lucide-react";
 import { format } from "date-fns";
 import { useToast } from "@/hooks/use-toast";
+import { ReservationCard } from '@/components/ReservationCard';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+
+interface Amenity {
+  icon: JSX.Element;
+  name: string;
+  description?: string;
+}
+
+const amenities: Amenity[] = [
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 20a4 4 0 100-8 4 4 0 000 8z" fill="currentColor"/>
+        <path d="M3 16c0-7.18 5.82-13 13-13s13 5.82 13 13-5.82 13-13 13S3 23.18 3 16z" stroke="currentColor" strokeWidth="2"/>
+      </svg>
+    ),
+    name: 'WiFi',
+    description: 'Available throughout the property'
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26 19v-7a2 2 0 00-2-2H8a2 2 0 00-2 2v7m20 0v3a2 2 0 01-2 2H8a2 2 0 01-2-2v-3m20 0H6" stroke="currentColor" strokeWidth="2"/>
+      </svg>
+    ),
+    name: 'Free parking',
+    description: 'On premises'
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 3v26M3 16h26" stroke="currentColor" strokeWidth="2"/>
+      </svg>
+    ),
+    name: 'Air conditioning',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26 6H6a2 2 0 00-2 2v16a2 2 0 002 2h20a2 2 0 002-2V8a2 2 0 00-2-2z" stroke="currentColor" strokeWidth="2"/>
+        <path d="M10 14a2 2 0 100-4 2 2 0 000 4z" fill="currentColor"/>
+      </svg>
+    ),
+    name: 'TV',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 28V6a2 2 0 012-2h12a2 2 0 012 2v22M4 28h24" stroke="currentColor" strokeWidth="2"/>
+      </svg>
+    ),
+    name: 'Heating',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 18a2 2 0 100-4 2 2 0 000 4z" fill="currentColor"/>
+        <path d="M25 12H7a2 2 0 00-2 2v10a2 2 0 002 2h18a2 2 0 002-2V14a2 2 0 00-2-2z" stroke="currentColor" strokeWidth="2"/>
+      </svg>
+    ),
+    name: 'Coffee maker',
+  }
+];
 
 const PropertyDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -199,13 +262,16 @@ const PropertyDetail = () => {
             {/* Features and Amenities */}
             <div className="border-b border-gray-200 pb-8 mb-8">
               <h2 className="text-xl font-semibold mb-4">What this place offers</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {property.amenities.map((amenity, index) => (
-                  <div key={index} className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-airbnb-dark mr-3">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>{amenity}</span>
+              <div className="grid grid-cols-2 gap-4">
+                {amenities.map((amenity, index) => (
+                  <div key={index} className="flex items-center space-x-4">
+                    <div className="text-gray-700">{amenity.icon}</div>
+                    <div>
+                      <div className="font-medium">{amenity.name}</div>
+                      {amenity.description && (
+                        <div className="text-sm text-gray-500">{amenity.description}</div>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>

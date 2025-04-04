@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +7,24 @@ import PropertyCard from "@/components/PropertyCard";
 import FilterBar from "@/components/FilterBar";
 import { properties } from "@/data/properties";
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+
+const InspirationCard = ({ image, title, gradient }: { image: string; title: string; gradient: string }) => (
+  <motion.div 
+    whileHover={{ y: -5 }}
+    className="group cursor-pointer"
+  >
+    <div className="overflow-hidden rounded-lg aspect-square mb-2 relative">
+      <div className={`absolute inset-0 ${gradient} opacity-30 group-hover:opacity-40 transition-opacity duration-300`} />
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      />
+      <h3 className="absolute bottom-3 left-3 font-medium text-white text-lg">{title}</h3>
+    </div>
+  </motion.div>
+);
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -15,6 +32,29 @@ const Index = () => {
 
   // Get featured properties (in a real app, this might be properties that are promoted)
   const featuredProperties = properties.slice(0, 3);
+
+  const inspirationCards = [
+    {
+      image: "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg",
+      title: "Mountain views",
+      gradient: "bg-gradient-to-t from-black/60 to-transparent"
+    },
+    {
+      image: "https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg",
+      title: "Beach destinations",
+      gradient: "bg-gradient-to-t from-black/60 to-transparent"
+    },
+    {
+      image: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg",
+      title: "City life",
+      gradient: "bg-gradient-to-t from-black/60 to-transparent"
+    },
+    {
+      image: "https://images.pexels.com/photos/5472258/pexels-photo-5472258.jpeg",
+      title: "Cozy cabins",
+      gradient: "bg-gradient-to-t from-black/60 to-transparent"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -69,6 +109,24 @@ const Index = () => {
               rating={property.rating}
               images={property.images}
               superhost={property.host.isSuperhost}
+            />
+          ))}
+        </div>
+      </div>
+      
+      {/* Inspiration Section */}
+      <div className="container mx-auto py-16 px-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+          Inspiration for your next trip
+        </h2>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {inspirationCards.map((card, index) => (
+            <InspirationCard
+              key={index}
+              image={card.image}
+              title={card.title}
+              gradient={card.gradient}
             />
           ))}
         </div>

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,8 +53,8 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				airbnb: {
-					red: '#FF5A5F',
-					dark: '#484848',
+					'red': '#FF385C',
+					'dark-red': '#D70466',
 					light: '#767676',
 					'super-light': '#F7F7F7'
 				},
