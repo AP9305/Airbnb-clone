@@ -10,8 +10,9 @@ const WishlistPage = () => {
   const { wishlist } = useWishlist();
   
   // Get wishlist properties from the properties data
+  // Convert property.id to string to match wishlist item type
   const wishlistProperties = properties.filter(property => 
-    wishlist.includes(property.id)
+    wishlist.includes(property.id.toString())
   );
 
   return (

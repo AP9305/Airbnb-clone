@@ -6,22 +6,23 @@ import { useWishlist } from '@/contexts/WishlistContext';
 import { cn } from '@/lib/utils';
 
 type WishlistButtonProps = {
-  propertyId: string;
+  propertyId: number;
   className?: string;
 };
 
 const WishlistButton = ({ propertyId, className }: WishlistButtonProps) => {
   const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist();
-  const isFavorite = isInWishlist(propertyId);
+  const propertyIdString = propertyId.toString();
+  const isFavorite = isInWishlist(propertyIdString);
 
   const toggleWishlist = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     
     if (isFavorite) {
-      removeFromWishlist(propertyId);
+      removeFromWishlist(propertyIdString);
     } else {
-      addToWishlist(propertyId);
+      addToWishlist(propertyIdString);
     }
   };
 
