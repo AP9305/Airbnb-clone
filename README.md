@@ -4,24 +4,34 @@ A modern accommodation booking platform built with React and TypeScript.
 
 ## 📸 Screenshots
 
-### Home Page
-<img src="public/assets/screenshots/home.jpg" alt="Home Page" width="800"/>
+### Home Page Hero
+![Home Page Hero](public/assets/screenshots/home-hero.jpg)
 
-### Property Details
-<img src="public/assets/screenshots/property.jpg" alt="Property Details" width="800"/>
+### Featured Properties
+![Featured Properties](public/assets/screenshots/featured-places.jpg)
 
-### Booking Interface
-<img src="public/assets/screenshots/booking.jpg" alt="Booking Interface" width="800"/>
+### Property Listings
+![Property Listings](public/assets/screenshots/property-cards.jpg)
 
-## ✨ Features
+### Category Navigation
+![Category Navigation](public/assets/screenshots/filter-bar.jpg)
 
-- 🔍 Property discovery with advanced filtering
-- 📅 Real-time booking system
-- 🔐 User authentication
+### Travel Inspiration
+![Travel Inspiration](public/assets/screenshots/inspiration-grid.jpg)
+
+### Explore Categories
+![Explore Categories](public/assets/screenshots/category-grid.jpg)
+
+## ✨ Key Features
+
+- 🔍 Advanced property search and filtering
+- 📅 Real-time availability calendar
+- 💳 Secure booking system
 - ❤️ Wishlist functionality
-- 📱 Responsive design
-- 🗺️ Interactive maps
-- 📊 Host dashboard
+- 📱 Fully responsive design
+- 🌍 Location-based search
+- 🏷️ Dynamic pricing
+- ⭐ Rating and review system
 
 ## 🛠️ Tech Stack
 
@@ -44,6 +54,50 @@ npm install
 # Start development server
 npm run dev
 ```
+
+## 📱 Features Showcase
+
+### Property Discovery
+- Advanced filtering options
+- Real-time search
+- Category-based browsing
+- Location-based results
+
+### Booking Experience
+- Interactive calendar
+- Guest selection
+- Instant pricing
+- Booking confirmation
+
+### User Features
+- Wishlist management
+- Property reviews
+- Host messaging
+- Profile management
+
+## 🔧 Core Components
+
+### Search and Navigation
+- Dynamic search bar
+- Category filters
+- Location selection
+- Date picker
+
+### Property Display
+- Image galleries
+- Amenity lists
+- Pricing calculator
+- Availability calendar
+
+### Booking System
+- Guest selection
+- Date range picker
+- Price breakdown
+- Instant booking
+
+## 📄 License
+
+MIT License - see LICENSE for details
 
 ## 📁 Project Structure
 
